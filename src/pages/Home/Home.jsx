@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 import heroImg from "../../utils/images/img20.jpg";
+import bottomImage from "../../utils/images/img28.png";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         image={heroImg}
         title="Africana Hotel"
         text="Where every stay feels like home."
+        bottomImage={bottomImage}
       />
       <Footer />
     </div>

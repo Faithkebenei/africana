@@ -72,12 +72,108 @@
 .sectionIntro h1 {
   font-size: 5rem;
   opacity: 0;
-  animation: slideBottom 1s forwards;
+  animation: slideBottom 3s forwards;
 }
 
 .sectionIntro p {
   opacity: 0;
-  animation: slideBottom 1s forwards;
+  animation: slideBottom 3s forwards;
+}
+
+.menuItems {
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  width: 100%;
+  height: -webkit-fill-available;
+  left: -100%;
+  transition: left 0.5s ease;
+  background-color: #ffffff;
+  background-position: calc(100% + 200px) center;
+  background-size: 600px;
+  padding: 50px 100px;
+}
+
+.active {
+  left: 0;
+  transition: left 0.5s ease;
+}
+
+.menuContent {
+  display: flex;
+  align-items: center;
+}
+
+.menuLinks {
+  margin-top: 40px;
+  width: 50%;
+}
+
+.menuLinks ul li {
+  list-style-type: none;
+  padding: 0.9375rem 0;
+  border-top: 2px solid #eeeeee;
+}
+
+.menuLinks ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #1e1e1e;
+}
+
+.menuLinks p {
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.moreInfo {
+  margin-left: 10%;
+}
+
+.map {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.map img {
+  width: 100%;
+  height: 100%;
+}
+
+.address {
+  margin: 30px 0;
+  font-size: 1rem;
+  line-height: 170%;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ff7c36;
+  background: linear-gradient(to right, #ff7c36 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuNav {
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.menuNav .logo p {
+  color: #1e1e1e;
 }
 
 @keyframes slideBottom {
@@ -142,6 +238,43 @@
   .sectionIntro p {
     font-size: 1.2rem;
   }
+
+  .menuNav {
+    padding: 0;
+  }
+
+  .moreInfo {
+    margin-left: 6%;
+  }
+
+  .menuItems {
+    padding: 30px 60px;
+  }
+
+  .menuLinks ul li {
+    padding: 0.8rem 0;
+  }
+
+  .menuLinks ul li a {
+    font-size: 1.2rem;
+  }
+
+  .address {
+    font-size: 0.8rem;
+  }
+
+  .map {
+    width: 350px;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menuLinks p {
+    font-size: 0.6rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -159,6 +292,39 @@
 
   .sectionIntro p {
     font-size: 0.9rem;
+  }
+
+  .menuNav {
+    padding: 0;
+  }
+
+  .menuNav .logo {
+    display: none;
+  }
+
+  .menuNav .buttonContainer {
+    display: none;
+  }
+
+  .moreInfo {
+    margin-left: 0;
+    display: none;
+  }
+
+  .menuItems {
+    padding: 20px 40px;
+  }
+
+  .menuContent {
+    display: block;
+  }
+
+  .menuLinks {
+    width: 100%;
+  }
+
+  .menuLinks p {
+    display: none;
   }
 }
 
@@ -186,5 +352,21 @@
 
   .sectionIntro p {
     font-size: 0.6rem;
+  }
+
+  .menuNav {
+    padding: 0;
+  }
+
+  .moreInfo {
+    margin-left: 0;
+  }
+
+  .menuItems {
+    padding: 30px;
+  }
+
+  .menuContent {
+    flex-direction: column;
   }
 }
