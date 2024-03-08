@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./Header.module.scss";
 import {
   FaBarsStaggered,
@@ -14,10 +16,16 @@ import {
 import Button from "../Button/Button";
 import map from "../../utils/images/map.jpg";
 
-const Header = ({ image, title, text, bottomImage }) => {
+const Header = ({ image, title, text }) => {
+  const navigate = useNavigate();
   const [hover, setHover] = useState(false);
   const [hoverSocial, setHoveredSocial] = useState();
   const [hamburger, setHamburger] = useState(false);
+
+  const handleClick = (toWhere) => {
+    navigate(`/${toWhere}`);
+    setHamburger(false);
+  };
 
   const socialIcons = [
     { index: 0, icon: FaXTwitter },
@@ -43,7 +51,7 @@ const Header = ({ image, title, text, bottomImage }) => {
               onClick={() => setHamburger(true)}
             />
           </div>
-          <div className={styles.logo}>
+          <div className={styles.logo} onClick={() => handleClick("")}>
             <p className={styles.first}>Africana</p>
             <p className={styles.second}>Hotel Bar & Resort</p>
           </div>
@@ -75,7 +83,7 @@ const Header = ({ image, title, text, bottomImage }) => {
               onClick={() => setHamburger(false)}
             />
           </div>
-          <div className={styles.logo}>
+          <div className={styles.logo} onClick={() => handleClick("")}>
             <p className={styles.first}>Africana</p>
             <p className={styles.second}>Hotel Bar & Resort</p>
           </div>
@@ -88,25 +96,29 @@ const Header = ({ image, title, text, bottomImage }) => {
           <div className={styles.menuLinks}>
             <ul>
               <li>
-                <a href="">Home</a>
+                <h4 onClick={() => handleClick("")}>Home</h4>
               </li>
               <li>
-                <a href="">About Us</a>
+                <h4 onClick={() => handleClick("about")}>About Us</h4>
               </li>
               <li>
-                <a href="">Dining</a>
+                <h4 onClick={() => handleClick("dining")}>Dining</h4>
               </li>
               <li>
-                <a href="">Accommodation</a>
+                <h4 onClick={() => handleClick("accommodation")}>
+                  Accommodation
+                </h4>
               </li>
               <li>
-                <a href="">Conference Rooms</a>
+                <h4 onClick={() => handleClick("conference-rooms")}>
+                  Conference Rooms
+                </h4>
               </li>
               <li>
-                <a href="">Gallery</a>
+                <h4 onClick={() => handleClick("gallery")}>Gallery</h4>
               </li>
               <li>
-                <a href="">Contact Us</a>
+                <h4 onClick={() => handleClick("contact")}>Contact Us</h4>
               </li>
             </ul>
             <p>
