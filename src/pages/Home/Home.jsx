@@ -4,6 +4,8 @@ import Header from "../../components/Header/Header";
 import TextContent from "../../components/TextContent/TextContent";
 import TextImage from "../../components/TextImage/TextImage";
 import WhyUs from "../../components/WhyUs/WhyUs";
+import Serenity from "../../components/Serenity/Serenity";
+import Testimonials from "../../components/Testimonials/Testimonials";
 import Footer from "../../components/Footer/Footer";
 
 import heroImg from "../../utils/images/img20.jpg";
@@ -11,6 +13,7 @@ import bottomImage from "../../utils/images/img28.png";
 import dining from "../../utils/images/img21.jpg";
 import accommodation from "../../utils/images/img22.jpg";
 import conference from "../../utils/images/img17.jpg";
+import serenity from "../../utils/images/img15.jpg";
 
 const Home = () => {
   const home = [
@@ -68,6 +71,10 @@ const Home = () => {
           toWhere={hm.toWhere}
         />
       ))}
+
+      <Serenity image={serenity} />
+
+      <Testimonials />
 
       <TextContent
         heading="Why Africana?"

@@ -19,6 +19,14 @@
   animation: slideUp 1s forwards;
 }
 
+.textContent h5 {
+  font-weight: bold;
+  margin-top: 1rem;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 1s forwards;
+}
+
 @keyframes slideUp {
   from {
     opacity: 0;

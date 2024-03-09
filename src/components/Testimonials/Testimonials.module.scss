@@ -1,0 +1,22 @@
+.testimonials {
+  text-align: center;
+  padding: 50px 100px;
+}
+
+@media (max-width: 991px) {
+  .testimonials {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 40px 20px;
+  }
+}
