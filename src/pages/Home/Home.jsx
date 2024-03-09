@@ -77,13 +77,7 @@ const Home = () => {
 
       <Testimonials />
       <CTA />
-
-      <TextContent
-        heading="Why Africana?"
-        text="Experience luxury and comfort at our hotel. Here are four reasons why you'll love your stay."
-        backgroundColor="#FFFFFF"
-      />
-      <Footer />
+      <Footer link="" />
     </div>
   );
 };

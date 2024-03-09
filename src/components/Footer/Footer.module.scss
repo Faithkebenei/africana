@@ -1,0 +1,12 @@
+.footer .menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 100px;
+  border: 2px solid #eeeeee;
+  margin: 50px 0;
+}
+
+.footer .menu p {
+  cursor: pointer;
+}

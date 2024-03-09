@@ -9,7 +9,7 @@ const Dining = () => {
   return (
     <div className={styles.about}>
       <Header image={heroImg} title="Dining" text="" />
-      <Footer />
+      <Footer link="dining" />
     </div>
   );
 };

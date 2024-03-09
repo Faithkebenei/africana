@@ -13,7 +13,7 @@ const Accommodation = () => {
         title="Accommodation"
         text="Discover cozy nests for your dreams."
       />
-      <Footer />
+      <Footer link="accommodation" />
     </div>
   );
 };

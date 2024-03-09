@@ -13,7 +13,7 @@ const About = () => {
         title="About Us"
         text="Grab a cup of coffee, get comfortable, and let us take you on a journey through our whimsical world of wonders!"
       />
-      <Footer />
+      <Footer link="about" />
     </div>
   );
 };

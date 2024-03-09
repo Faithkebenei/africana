@@ -9,7 +9,7 @@ const Conference = () => {
   return (
     <div className={styles.about}>
       <Header image={heroImg} title="Conference Rooms" text="" />
-      <Footer />
+      <Footer link="conference-rooms" />
     </div>
   );
 };

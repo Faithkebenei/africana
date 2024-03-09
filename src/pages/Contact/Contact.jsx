@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div className={styles.about}>
       <Header image={heroImg} title="Get in Touch" text="" />
-      <Footer />
+      <Footer link="contact" />
     </div>
   );
 };
