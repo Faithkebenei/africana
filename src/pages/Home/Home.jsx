@@ -6,6 +6,7 @@ import TextImage from "../../components/TextImage/TextImage";
 import WhyUs from "../../components/WhyUs/WhyUs";
 import Serenity from "../../components/Serenity/Serenity";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import CTA from "../../components/CTA/CTA";
 import Footer from "../../components/Footer/Footer";
 
 import heroImg from "../../utils/images/img20.jpg";
@@ -75,6 +76,7 @@ const Home = () => {
       <Serenity image={serenity} />
 
       <Testimonials />
+      <CTA />
 
       <TextContent
         heading="Why Africana?"

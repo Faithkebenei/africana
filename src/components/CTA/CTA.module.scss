@@ -1,0 +1,53 @@
+.CTA {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  // height: 150px;
+}
+
+.bgOpacity {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 124, 54, 0.8);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.bgOpacity p {
+  font-size: 2.2rem;
+  color: #ffffff;
+  line-height: 170%;
+}
+
+.bgOpacity p span {
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .bgOpacity {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bgOpacity {
+    padding: 20px 40px;
+  }
+
+  .bgOpacity p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bgOpacity {
+    padding: 20px;
+  }
+
+  .bgOpacity p {
+    font-size: 1.2rem;
+  }
+}
