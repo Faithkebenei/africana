@@ -22,3 +22,13 @@
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 480px) {
+  .button {
+    width: 100px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    padding: 10px 2px;
+    border: 1px solid #ff7c36;
+  }
+}

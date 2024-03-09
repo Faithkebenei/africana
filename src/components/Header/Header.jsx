@@ -56,7 +56,7 @@ const Header = ({ image, title, text }) => {
             <p className={styles.second}>Hotel Bar & Resort</p>
           </div>
           <div className={styles.buttonContainer}>
-            <Button color="#FFFFFF" hoverColor="#FFFFFF" />
+            <Button color="#FFFFFF" hoverColor="#FFFFFF" text="Book Now" />
           </div>
         </div>
 
@@ -88,7 +88,7 @@ const Header = ({ image, title, text }) => {
             <p className={styles.second}>Hotel Bar & Resort</p>
           </div>
           <div className={styles.buttonContainer}>
-            <Button color="#1E1E1E" hoverColor="#FFFFFF" />
+            <Button color="#1E1E1E" hoverColor="#FFFFFF" text="Book Now" />
           </div>
         </div>
 

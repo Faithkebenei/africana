@@ -224,7 +224,7 @@
 
 @media (max-width: 991px) {
   .nav {
-    padding: 30px 60px;
+    padding: 40px 60px;
   }
 
   .logo p {
@@ -335,11 +335,11 @@
 
 @media (max-width: 480px) {
   .nav {
-    padding: 30px;
+    padding: 20px;
   }
 
   .logo p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .icon {
@@ -368,10 +368,14 @@
   }
 
   .menuItems {
-    padding: 30px;
+    padding: 20px;
   }
 
   .menuContent {
     flex-direction: column;
+  }
+
+  .menu {
+    width: auto;
   }
 }

@@ -1,0 +1,49 @@
+.textContent {
+  text-align: center;
+  padding: 50px 100px;
+}
+
+.textContent h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.875rem;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 1s forwards;
+}
+
+.textContent p {
+  font-size: 1.2rem;
+  line-height: 170%;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991px) {
+  .textContent {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .textContent {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textContent {
+    padding: 40px 20px;
+  }
+}

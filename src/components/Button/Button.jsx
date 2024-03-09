@@ -1,21 +1,24 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-const Button = ({ color, hoverColor }) => {
+const Button = ({ color, hoverColor, text, clicked, bgColor }) => {
+  console.log(clicked);
   return (
     <button
       className={styles.button}
       style={{
-        color: color,
+        color: bgColor ? "#FFFFFF" : color,
+        backgroundColor: bgColor,
       }}
       onMouseEnter={(e) => {
         e.target.style.color = hoverColor;
       }}
       onMouseLeave={(e) => {
-        e.target.style.color = color;
+        e.target.style.color = bgColor ? "#FFFFFF" : color;
       }}
+      onClick={clicked}
     >
-      Book Now
+      {text}
     </button>
   );
 };
