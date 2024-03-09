@@ -2,13 +2,41 @@ import React from "react";
 import styles from "./Home.module.scss";
 import Header from "../../components/Header/Header";
 import TextContent from "../../components/TextContent/TextContent";
+import TextImage from "../../components/TextImage/TextImage";
 import WhyUs from "../../components/WhyUs/WhyUs";
 import Footer from "../../components/Footer/Footer";
 
 import heroImg from "../../utils/images/img20.jpg";
 import bottomImage from "../../utils/images/img28.png";
+import dining from "../../utils/images/img21.jpg";
+import accommodation from "../../utils/images/img22.jpg";
+import conference from "../../utils/images/img17.jpg";
 
 const Home = () => {
+  const home = [
+    {
+      index: 0,
+      img: dining,
+      toWhere: "Dining",
+      heading: "Dining",
+      text: "Savor the flavors of excellence at our dining venues. From tantalizing dishes to refreshing beverages, indulge in a culinary journey like no other. Click below to explore our dining options and reserve your table for an unforgettable experience.",
+    },
+    {
+      index: 1,
+      img: accommodation,
+      toWhere: "accommodation",
+      heading: "Accommodation",
+      text: "Experience unparalleled comfort and luxury in our accommodations. From cozy rooms to spacious suites, each space is meticulously designed for your utmost relaxation. Click below to explore our rooms and reserve your stay for an unforgettable experience.",
+      reverse: true,
+    },
+    {
+      index: 2,
+      img: conference,
+      toWhere: "conference-rooms",
+      heading: "Conference Rooms",
+      text: "Elevate your meetings and events in our conference rooms. From intimate gatherings to large-scale conferences, our venues offer the perfect blend of functionality and sophistication. Click below to explore our conference facilities and book your next event for a seamless experience.",
+    },
+  ];
   return (
     <div className={styles.home}>
       <Header
@@ -30,6 +58,17 @@ const Home = () => {
       />
 
       <WhyUs />
+      {home.map((hm) => (
+        <TextImage
+          image={hm.img}
+          heading={hm.heading}
+          text={hm.text}
+          includeButton
+          reverse={hm.reverse ? true : false}
+          toWhere={hm.toWhere}
+        />
+      ))}
+
       <TextContent
         heading="Why Africana?"
         text="Experience luxury and comfort at our hotel. Here are four reasons why you'll love your stay."
