@@ -12,9 +12,9 @@ const WhyUs = () => {
   const whyUsObj = [
     {
       index: 0,
-      img: hospitalityImg,
-      name: "Hospitality",
-      text: "Our dedicated team goes above and beyond to ensure that every guest feels valued and cared for, providing personalized service and attention to detail that exceeds expectations.",
+      img: diningImg,
+      name: "Dining",
+      text: "Savor locally inspired culinary delights at our on-site restaurants, where talented chefs craft unforgettable dishes, promising a gastronomic journey like no other.",
     },
     {
       index: 1,
@@ -28,11 +28,12 @@ const WhyUs = () => {
       name: "Rooms",
       text: "Experience ultimate comfort and relaxation in our well-appointed rooms and suites, complete with modern amenities and plush furnishings making your stay unforgettable.",
     },
+
     {
       index: 3,
-      img: diningImg,
-      name: "Dining",
-      text: "Savor locally inspired culinary delights at our on-site restaurants, where talented chefs craft unforgettable dishes, promising a gastronomic journey like no other.",
+      img: hospitalityImg,
+      name: "Hospitality",
+      text: "Our dedicated team goes above and beyond to ensure that every guest feels valued and cared for, providing personalized service and attention to detail that exceeds expectations.",
     },
   ];
 

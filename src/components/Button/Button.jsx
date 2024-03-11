@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-const Button = ({ color, hoverColor, text, clicked, bgColor }) => {
+const Button = ({ color, hoverColor, text, clicked, bgColor, border }) => {
   console.log(clicked);
   return (
     <button
@@ -9,6 +9,7 @@ const Button = ({ color, hoverColor, text, clicked, bgColor }) => {
       style={{
         color: bgColor ? "#FFFFFF" : color,
         backgroundColor: bgColor,
+        borderRadius: border ? "0" : "",
       }}
       onMouseEnter={(e) => {
         e.target.style.color = hoverColor;

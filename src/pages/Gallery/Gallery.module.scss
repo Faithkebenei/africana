@@ -1,0 +1,83 @@
+.gallery {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  overflow: auto;
+}
+
+.topDiv,
+.bottomDiv {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.middleDiv {
+  width: 100%;
+  height: 18.75rem;
+  border-left: 100px solid #ffffff;
+  border-right: 100px solid #ffffff;
+}
+
+.topDiv p,
+.bottomDiv p {
+  font-size: 1.125rem;
+  line-height: 170%;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 1s forwards;
+  padding: 50px 100px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.missionCont {
+  background-color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .topDiv p,
+  .bottomDiv p {
+    padding: 40px 60px;
+  }
+
+  .middleDiv {
+    border-left: 60px solid #ffffff;
+    border-right: 60px solid #ffffff;
+  }
+}
+
+@media (max-width: 767px) {
+  .topDiv p,
+  .bottomDiv p {
+    padding: 40px;
+  }
+
+  .middleDiv {
+    border-left: 40px solid #ffffff;
+    border-right: 40px solid #ffffff;
+  }
+}
+
+@media (max-width: 480px) {
+  .topDiv p,
+  .bottomDiv p {
+    padding: 40px 20px;
+  }
+
+  .middleDiv {
+    border-left: 20px solid #ffffff;
+    border-right: 20px solid #ffffff;
+  }
+}

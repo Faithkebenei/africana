@@ -12,6 +12,7 @@
 .image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .content {
@@ -50,13 +51,29 @@
   }
 }
 
+.whyUsButton {
+  width: 180px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #ff7c36;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #ff7c36 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.whyUsButton:hover {
+  background-position: left bottom;
+  color: #ffffff;
+}
+
 @media (max-width: 991px) {
   .textImage {
     padding: 40px 60px;
-  }
-
-  .image {
-    height: 250px;
   }
 
   .image img {
@@ -72,7 +89,7 @@
   }
 
   .content p {
-    font-size: 0.8rem;
+    // font-size: 0.8rem;
     // line-height: 170%;
     margin-bottom: 1rem;
     // // width: 80%;
@@ -113,5 +130,10 @@
 
   .image {
     height: auto;
+  }
+
+  .whyUsButton {
+    width: 100px;
+    font-size: 0.8rem;
   }
 }

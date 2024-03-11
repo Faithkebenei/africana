@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./TextImage.module.scss";
-import Button from "../Button/Button";
 
 const TextImage = ({
   image,
@@ -51,13 +50,24 @@ const TextImage = ({
         <h2>{heading}</h2>
         <p>{text}</p>
         {includeButton ? (
-          <Button
-            color="#1E1E1E"
-            hoverColor="#FFFFFF"
-            text="Discover"
-            clicked={() => handleClick(toWhere)}
-          />
+          <div className={styles.btnContainer}>
+            <button
+              className={styles.whyUsButton}
+              style={{}}
+              onClick={() => {
+                handleClick(toWhere);
+              }}
+            >
+              Discover
+            </button>
+          </div>
         ) : (
+          // <Button
+          //   color="#1E1E1E"
+          //   hoverColor="#FFFFFF"
+          //   text="Discover"
+          //   clicked={() => handleClick(toWhere)}
+          // />
           ""
         )}
       </div>

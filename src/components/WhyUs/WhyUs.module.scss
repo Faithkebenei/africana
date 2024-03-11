@@ -1,5 +1,5 @@
 .whyUs {
-  padding: 50px 100px;
+  padding: 0 100px 50px;
 }
 
 .imageContainer {
@@ -10,6 +10,8 @@
 
 .imageContainer img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: opacity 0.5s ease;
 }
 
@@ -18,7 +20,7 @@
 }
 
 .smallContainer {
-  height: 380px;
+  // height: 380px;
   width: 300px;
   border: 2px solid #ff7c36;
   background-color: #ffffff;
@@ -36,12 +38,14 @@
 
 .img {
   width: 100%;
-  height: 45%;
+  height: 50%;
   overflow: hidden;
 }
 
 .img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: opacity 0.5s ease;
 }
 
@@ -107,7 +111,7 @@
 @media (max-width: 991px) {
   .smallContainer {
     height: 300px;
-    width: 200px;
+    width: 240px;
     right: 3%;
     bottom: 0;
     padding: 10px;
@@ -134,7 +138,7 @@
   }
 
   .whyUs {
-    padding: 40px 60px;
+    padding: 0 60px 40px;
   }
 }
 
@@ -172,7 +176,7 @@
   }
 
   .whyUs {
-    padding: 40px;
+    padding: 0 40px 40px;
   }
 
   //   .smallContainer {
@@ -230,7 +234,7 @@
   }
 
   .content p {
-    font-size: 0.7rem;
+    font-size: 1rem;
     line-height: 170%;
   }
 

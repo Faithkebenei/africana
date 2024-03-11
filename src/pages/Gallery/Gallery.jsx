@@ -1,12 +1,8 @@
 import React from "react";
-import Footer from "../../components/Footer/Footer";
+import styles from "./Gallery.module.scss";
 
 const Gallery = () => {
-  return (
-    <div>
-      <Footer link="gallery" />
-    </div>
-  );
+  return <div className="">Gallery</div>;
 };
 
 export default Gallery;
