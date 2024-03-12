@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Footer.module.scss";
-import Button from "../Button/Button";
 
 import image from "../../utils/images/map.jpg";
 
