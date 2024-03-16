@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Dining.module.scss";
 import Header from "../../components/Header/Header";
-import TextImage from "../../components/TextImage/TextImage";
 import Gallery from "../../components/Gallery/Gallery";
 import CTA from "../../components/CTA/CTA";
 import Footer from "../../components/Footer/Footer";
@@ -29,22 +28,6 @@ const Dining = () => {
   return (
     <div className={styles.about}>
       <Header image={heroImg} title="Dining" text="" />
-      {/* <TextImage
-        image={restaurant}
-        heading="Experience Culinary Bliss with Us"
-        text="Embark on a culinary journey through the rich and vibrant flavors
-  of Kenya at our dining venues. Delight in an exquisite array of
-  traditional Kenyan dishes, each meticulously prepared with locally
-  sourced ingredients and infused with centuries-old culinary
-  traditions. From succulent Nyama Choma grilled to perfection to
-  hearty stews bursting with aromatic spices, our menu celebrates
-  the diverse flavors and cultural heritage of Kenya. Savor the
-  tantalizing flavors of Swahili cuisine, whether you're a
-  connoisseur of fine dining or an adventurous epicurean. Our
-  restaurants offer an unparalleled gastronomic experience that
-  showcases the best of Kenyan cuisine in every delectable bite."
-      /> */}
-
       <div className={styles.diningContent}>
         <div className={styles.content}>
           <div className={styles.image}>

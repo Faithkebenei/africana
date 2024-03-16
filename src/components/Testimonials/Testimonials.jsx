@@ -1,20 +1,3 @@
-// import React from "react";
-// import styles from "./Testimonials.module.scss";
-// import TextContent from "../TextContent/TextContent";
-
-// const Testimonials = () => {
-//   return (
-//     <div className={styles.testimonials}>
-//   <TextContent
-//     heading="Guests Share Rave Reviews for Africana Hotel"
-//     text="Our stay at Africana Hotel was simply unforgettable. From the warm welcome at check-in to the impeccable service throughout our stay, every moment was a delight. The luxurious accommodations, delectable dining options, and stunning views made our visit truly special. We can't wait to return!"
-//   />
-//     </div>
-//   );
-// };
-
-// export default Testimonials;
-
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";

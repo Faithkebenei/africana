@@ -6,6 +6,7 @@ const TextImage = ({
   image,
   heading,
   text,
+  otherText,
   includeButton,
   reverse,
   toWhere,
@@ -49,6 +50,7 @@ const TextImage = ({
       >
         <h2>{heading}</h2>
         <p>{text}</p>
+        <p>{otherText}</p>
         {includeButton ? (
           <div className={styles.btnContainer}>
             <button

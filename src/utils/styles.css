@@ -1,0 +1,11 @@
+/* Custom styles for react-responsive-carousel arrows */
+/* Left arrow */
+.react-responsive-carousel .carousel .control-prev.control-arrow {
+  left: 10px; /* Adjust the left position as needed */
+}
+
+/* Right arrow */
+.react-responsive-carousel .carousel .control-next.control-arrow {
+  right: 10px; /* Adjust the right position as needed */
+  color: black;
+}
