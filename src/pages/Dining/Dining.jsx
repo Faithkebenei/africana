@@ -26,7 +26,7 @@ const Dining = () => {
     { index: 5, image: food6 },
   ];
   return (
-    <div className={styles.about}>
+    <div className={styles.dining}>
       <Header image={heroImg} title="Dining" text="" />
       <div className={styles.diningContent}>
         <div className={styles.content}>

@@ -59,7 +59,7 @@ const Accommodation = () => {
   ];
 
   return (
-    <div className={styles.about}>
+    <div className={styles.accomodation}>
       <Header
         image={heroImg}
         title="Accommodation"

@@ -10,7 +10,7 @@ import restaurant from "../../utils/images/img6.jpg";
 
 const Conference = () => {
   return (
-    <div className={styles.about}>
+    <div className={styles.conference}>
       <Header image={heroImg} title="Conference Rooms" text="" />
       <div className={styles.roomsContent}>
         <div className={styles.content}>
