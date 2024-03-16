@@ -1,0 +1,88 @@
+.roomsContent {
+  padding: 50px 100px 0;
+}
+
+.roomsContent h2 {
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.content .text {
+  margin-left: 2rem;
+  width: 60%;
+}
+
+.imageContainer {
+  width: 40%;
+  position: relative;
+  height: 545px;
+}
+
+.image {
+  width: 80%;
+  height: 545px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.topContainer {
+  width: 13.125rem;
+  height: 10rem;
+  background-color: #ffffff;
+  padding: 10px;
+  font-size: 1rem;
+  line-height: 170%;
+  border: 2px solid #ff7c36;
+  position: absolute;
+  top: 50%;
+}
+
+.text p {
+  font-size: 1.125rem;
+  line-height: 170%;
+}
+
+@media (max-width: 991px) {
+  .roomsContent {
+    padding: 40px 60px 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .content .text {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .roomsContent {
+    padding: 40px 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .roomsContent {
+    padding: 40px 20px 0;
+  }
+}
