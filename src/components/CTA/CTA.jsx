@@ -9,7 +9,7 @@ const CTA = () => {
       <div className={styles.bgOpacity}>
         <p>
           For reservations, feel free to contact us at{" "}
-          <span> events@africanahotel.com</span>
+          <span> events@africanahotel.com </span>
           or give us a call at <span> 0712 345678</span>.
         </p>
       </div>

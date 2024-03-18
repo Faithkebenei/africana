@@ -4,7 +4,7 @@ const ACCOMMODATIONPAGE = "/accommodation";
 const CONFERENCEPAGE = "/conference-rooms";
 const CONTACTPAGE = "/contact";
 const DININGPAGE = "/dining";
-const GALLERYPAGE = "/gallery";
+const CAREERSPAGE = "/careers";
 
 const pageUrl = {
   HOMEPAGE,
@@ -13,7 +13,7 @@ const pageUrl = {
   CONFERENCEPAGE,
   CONTACTPAGE,
   DININGPAGE,
-  GALLERYPAGE,
+  CAREERSPAGE,
 };
 
 export default pageUrl;

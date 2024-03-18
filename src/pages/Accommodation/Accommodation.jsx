@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import styles from "./Accommodation.module.scss";
 import Header from "../../components/Header/Header";
@@ -17,9 +17,6 @@ import room3 from "../../utils/images/img15.jpg";
 import room4 from "../../utils/images/img24.jpg";
 import room5 from "../../utils/images/img9.jpg";
 import room6 from "../../utils/images/img18.jpg";
-
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 
 const Accommodation = () => {
   const photos = [
@@ -40,7 +37,7 @@ const Accommodation = () => {
       amenities: [
         "High-speed fibre optic Wi-Fi connection",
         "Max guest: 2",
-        "Bed size(s): King/ Twin",
+        "Bed size(s): King",
         "Room size: 34m²",
       ],
     },
@@ -51,12 +48,44 @@ const Accommodation = () => {
       text: "Our stylish Premier rooms offer ample space to wind down and relax, as well as plenty of natural light through the floor-to-ceiling window. Up here, you'll be treated to superb urban views to savour and — don't forget — snap a selfie while you're at it.",
       amenities: [
         "High-speed fibre optic Wi-Fi connection",
-        "Max guest: 2",
+        "Max guest: 4",
         "Bed size(s): King/ Twin",
-        "Room size: 34m²",
+        "Room size: 68m²",
+      ],
+    },
+    {
+      index: 2,
+      image: room3,
+      heading: "3 Bedroom",
+      text: "Our stylish Premier rooms offer ample space to wind down and relax, as well as plenty of natural light through the floor-to-ceiling window. Up here, you'll be treated to superb urban views to savour and — don't forget — snap a selfie while you're at it.",
+      amenities: [
+        "High-speed fibre optic Wi-Fi connection",
+        "Max guest: 8",
+        "Bed size(s): King/ Twin",
+        "Room size: 136m²",
       ],
     },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(goToNextSlide, 10000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  const goToPreviousSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? rooms.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === rooms.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <div className={styles.accomodation}>
@@ -70,40 +99,31 @@ const Accommodation = () => {
       </div>
       <div className={styles.diningContent}>
         <h2 className={styles.heading}>Our Rooms</h2>
-        {rooms.map((room) => (
-          <div className={styles.content}>
-            <div className={styles.image}>
-              <img src={room6} alt="" />
-              <div className={styles.leftArrow}>
-                <div className={styles.innerArrow}>
-                  <FaArrowLeft color="#AEAEAE" />
-                </div>
-              </div>
-              <div className={styles.rightArrow}>
-                <div className={styles.innerArrow}>
-                  <FaArrowRight color="#AEAEAE" />
-                </div>
+        <div className={styles.content}>
+          <div className={styles.image}>
+            <img src={rooms[currentIndex].image} alt="" />
+            <div className={styles.leftArrow}>
+              <div className={styles.innerArrow} onClick={goToPreviousSlide}>
+                <FaArrowLeft color="#AEAEAE" />
               </div>
             </div>
-            <div className={styles.text}>
-              <h2>{room.heading}</h2>
-              <p>
-                Our stylish Premier rooms offer ample space to wind down and
-                relax, as well as plenty of natural light through the
-                floor-to-ceiling window. Up here, you'll be treated to superb
-                urban views to savour and — don't forget — snap a selfie while
-                you're at it.
-              </p>
-              <ul>
-                <li>High-speed fibre optic Wi-Fi connection</li>
-                <li>Max guest: 2</li>
-                <li>Bed size(s): King/ Twin</li>
-                <li>Room size: 34m²</li>
-              </ul>
-              <Button text="Book Now" color="#1E1E1E" hoverColor="#FFFFFF" />
+            <div className={styles.rightArrow}>
+              <div className={styles.innerArrow} onClick={goToNextSlide}>
+                <FaArrowRight color="#AEAEAE" />
+              </div>
             </div>
           </div>
-        ))}
+          <div className={styles.text}>
+            <h2>{rooms[currentIndex].heading}</h2>
+            <p>{rooms[currentIndex].text}</p>
+            <ul>
+              {rooms[currentIndex].amenities.map((amenity) => (
+                <li>{amenity}</li>
+              ))}
+            </ul>
+            <Button text="Book Now" color="#1E1E1E" hoverColor="#FFFFFF" />
+          </div>
+        </div>
       </div>
       <div className={styles.Gallery}>
         <h2>Discover Culinary Delights</h2>

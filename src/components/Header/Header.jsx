@@ -115,7 +115,7 @@ const Header = ({ image, title, text }) => {
                 </h4>
               </li>
               <li>
-                <h4 onClick={() => handleClick("gallery")}>Gallery</h4>
+                <h4 onClick={() => handleClick("careers")}>Careers</h4>
               </li>
               <li>
                 <h4 onClick={() => handleClick("contact")}>Contact Us</h4>

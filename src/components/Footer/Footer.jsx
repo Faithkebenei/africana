@@ -23,7 +23,7 @@ const Footer = ({ link }) => {
     { index: 2, name: "Dining", link: "dining" },
     { index: 3, name: "Accomodation", link: "accommodation" },
     { index: 4, name: "Conference Rooms", link: "conference-rooms" },
-    { index: 6, name: "Gallery", link: "gallery" },
+    { index: 6, name: "Careers", link: "careers" },
     { index: 6, name: "Contact Us", link: "contact" },
   ];
 

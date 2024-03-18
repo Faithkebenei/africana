@@ -8,7 +8,7 @@ import {
   Conference,
   Contact,
   Dining,
-  Gallery,
+  Careers,
 } from "./pages/pages";
 
 const RouteManager = () => {
@@ -26,7 +26,7 @@ const RouteManager = () => {
           <Route exact path={pageUrl.CONFERENCEPAGE} element={<Conference />} />
           <Route exact path={pageUrl.CONTACTPAGE} element={<Contact />} />
           <Route exact path={pageUrl.DININGPAGE} element={<Dining />} />
-          <Route exact path={pageUrl.GALLERYPAGE} element={<Gallery />} />
+          <Route exact path={pageUrl.CAREERSPAGE} element={<Careers />} />
         </Routes>
       </BrowserRouter>
     </div>
