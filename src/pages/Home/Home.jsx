@@ -49,6 +49,7 @@ const Home = () => {
         text="Where every stay feels like home."
         bottomImage={bottomImage}
       />
+
       <TextContent
         heading="Your Oasis of Hospitality"
         text="Welcome to Africana Hotel, your haven of hospitality nestled in the heart of Narok. At Africana Hotel, we pride ourselves on offering unparalleled comfort, personalized service, and memorable experiences to every guest. Whether you're here for business or pleasure, our dedicated team is committed to ensuring your stay is nothing short of exceptional. From our luxurious accommodations to our exquisite dining options and world-class amenities, we strive to create a welcoming atmosphere where you can relax, recharge, and make unforgettable memories. Experience the warmth and charm of Africana Hotel during your next visit to Narok."

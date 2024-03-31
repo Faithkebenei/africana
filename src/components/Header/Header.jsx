@@ -39,6 +39,23 @@ const Header = ({ image, title, text }) => {
     backgroundImage: `url(${image})`,
   };
 
+  const handleBookNow = () => {
+    // window.open("tel:+1234567890");
+    const email = "events@africanahotel.com";
+    const subject = "Subject"; // Replace with email subject
+    const body = "Body";
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink);
+  };
+  const handleArrowClick = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={styles.header} style={style}>
       <div className={styles.opacity}></div>
@@ -56,11 +73,16 @@ const Header = ({ image, title, text }) => {
             <p className={styles.second}>Hotel Bar & Resort</p>
           </div>
           <div className={styles.buttonContainer}>
-            <Button color="#FFFFFF" hoverColor="#FFFFFF" text="Book Now" />
+            <Button
+              color="#FFFFFF"
+              hoverColor="#FFFFFF"
+              text="Book Now"
+              clicked={handleBookNow}
+            />
           </div>
         </div>
 
-        <div className={styles.arrowDown}>
+        <div className={styles.arrowDown} onClick={handleArrowClick}>
           <FaChevronDown size="2rem" color="#ffffff" />
         </div>
 
@@ -68,10 +90,6 @@ const Header = ({ image, title, text }) => {
           <h1>{title}</h1>
           <p>{text}</p>
         </div>
-
-        {/* <div className={styles.shape}>
-          <img src={bottomImage ? bottomImage : smokeImage} alt="" />
-        </div> */}
       </div>
 
       <div className={`${styles.menuItems} ${hamburger ? styles.active : ""}`}>

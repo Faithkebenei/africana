@@ -87,6 +87,10 @@ const Accommodation = () => {
     );
   };
 
+  const handleBookNow = () => {
+    window.open("tel:+1234567890");
+  };
+
   return (
     <div className={styles.accomodation}>
       <Header
@@ -121,7 +125,12 @@ const Accommodation = () => {
                 <li>{amenity}</li>
               ))}
             </ul>
-            <Button text="Book Now" color="#1E1E1E" hoverColor="#FFFFFF" />
+            <Button
+              text="Book Now"
+              color="#1E1E1E"
+              hoverColor="#FFFFFF"
+              clicked={handleBookNow}
+            />
           </div>
         </div>
       </div>

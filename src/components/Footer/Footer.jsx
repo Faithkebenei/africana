@@ -1,3 +1,18 @@
+/* Create a db
+Creating careers
+Reading available careers
+
+Creating newsletter signups
+Reading newsletter signups
+
+Displaying the location on all maps
+Linking to social media pages
+Actual phone number
+Actual email address
+Actual location
+Sending message to email
+*/
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Footer.module.scss";
@@ -17,19 +32,23 @@ const Footer = ({ link }) => {
   const [activeLink, setActiveLink] = useState(link);
   const [hover, setHover] = useState(false);
   const [hoverSocial, setHoveredSocial] = useState();
+  const [newsEmail, setNewsEmail] = useState("");
+
   const menus = [
     { index: 0, name: "Home", link: "" },
     { index: 1, name: "About Us", link: "about" },
     { index: 2, name: "Dining", link: "dining" },
     { index: 3, name: "Accomodation", link: "accommodation" },
     { index: 4, name: "Conference Rooms", link: "conference-rooms" },
-    { index: 6, name: "Careers", link: "careers" },
+    { index: 5, name: "Careers", link: "careers" },
     { index: 6, name: "Contact Us", link: "contact" },
   ];
 
   const handleClick = (whereTo) => {
     navigate(`/${whereTo}`);
     setActiveLink(whereTo);
+
+    window.scrollTo(0, 0);
   };
 
   const socialIcons = [
@@ -39,8 +58,19 @@ const Footer = ({ link }) => {
     { index: 3, icon: FaInstagram },
     { index: 4, icon: FaLinkedinIn },
   ];
+  // https://script.google.com/macros/s/AKfycbw2l2x-kdDrQWDtbg3W9w7GS1KBmOcXQ_otDJBlEljiWfMuObJ5aWAJAHsvvwSjigek5g/exec
 
-  const handleMailClick = () => {};
+  const handlenewsSignUp = async (e) => {
+    e.preventDefault();
+    fetch(
+      "https://script.google.com/macros/s/AKfycbw2l2x-kdDrQWDtbg3W9w7GS1KBmOcXQ_otDJBlEljiWfMuObJ5aWAJAHsvvwSjigek5g/exec",
+      { method: "POST", body: newsEmail }
+    )
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div className={styles.footerCont}>
       <div className={styles.footer}>
@@ -48,7 +78,9 @@ const Footer = ({ link }) => {
           {menus.map((menu) => (
             <p
               style={{ color: activeLink === menu.link ? "#ff7c36" : "" }}
-              onClick={() => handleClick(menu.link)}
+              onClick={() => {
+                handleClick(menu.link);
+              }}
             >
               {menu.name}
             </p>
@@ -57,24 +89,18 @@ const Footer = ({ link }) => {
         <div className={styles.mailing}>
           <p>Sign up for offers and news </p>
           <div className={styles.content}>
-            <input type="text" placeholder="Your email address" />
-            <button
-              className={styles.whyUsButton}
-              style={{}}
-              onClick={() => {
-                handleMailClick();
-              }}
-            >
-              Subscribe
-            </button>
-            {/* <Button
-          color="#1E1E1E"
-          hoverColor="#FFFFFF"
-          bgColor="#ff7c36"
-          text="Subscribe"
-          border
-          clicked={() => handleMailClick()}
-        /> */}
+            <form onSubmit={(e) => handlenewsSignUp(e)}>
+              <input
+                type="text"
+                name="Email"
+                value={newsEmail}
+                onChange={(e) => setNewsEmail(e.target.value)}
+                placeholder="Your email address"
+              />
+              <button className={styles.whyUsButton} type="submit" style={{}}>
+                Subscribe
+              </button>
+            </form>
           </div>
         </div>
         <div className={styles.address}>

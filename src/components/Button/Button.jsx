@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Button.module.scss";
 
 const Button = ({ color, hoverColor, text, clicked, bgColor, border }) => {
-  console.log(clicked);
   return (
     <button
       className={styles.button}

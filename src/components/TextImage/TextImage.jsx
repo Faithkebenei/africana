@@ -14,6 +14,7 @@ const TextImage = ({
   const navigate = useNavigate();
   const handleClick = (toWhere) => {
     navigate(`/${toWhere}`);
+    window.scrollTo(0, 0);
   };
   const [screenSize, setScreenSize] = useState(window.innerWidth);
 
