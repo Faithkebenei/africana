@@ -9,6 +9,7 @@ import {
   Contact,
   Dining,
   Careers,
+  StaffPortal,
 } from "./pages/pages";
 
 const RouteManager = () => {
@@ -27,6 +28,7 @@ const RouteManager = () => {
           <Route exact path={pageUrl.CONTACTPAGE} element={<Contact />} />
           <Route exact path={pageUrl.DININGPAGE} element={<Dining />} />
           <Route exact path={pageUrl.CAREERSPAGE} element={<Careers />} />
+          <Route exact path={pageUrl.STAFFPAGE} element={<StaffPortal />} />
         </Routes>
       </BrowserRouter>
     </div>

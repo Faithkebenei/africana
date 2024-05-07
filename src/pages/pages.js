@@ -5,5 +5,15 @@ import Conference from "./Conference/Conference";
 import Contact from "./Contact/Contact";
 import Dining from "./Dining/Dining";
 import Careers from "./Careers/Careers";
+import StaffPortal from "./StaffPortal/StaffPortal";
 
-export { Home, About, Accommodation, Conference, Contact, Dining, Careers };
+export {
+  Home,
+  About,
+  Accommodation,
+  Conference,
+  Contact,
+  Dining,
+  Careers,
+  StaffPortal,
+};

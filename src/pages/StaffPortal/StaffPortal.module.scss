@@ -1,0 +1,266 @@
+p {
+  margin-bottom: 0 !important;
+}
+
+.body {
+  position: relative;
+  margin: 0;
+}
+.navBar {
+  background-color: #fafafa;
+  height: 100px;
+  width: 100%;
+  border-bottom: 2px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sideBar {
+  background-color: #ff7c36;
+  min-height: 100vh;
+  width: 20%;
+  position: absolute;
+  top: 0;
+}
+
+.logoContainer {
+  height: 100px;
+  width: 100%;
+  border-bottom: 2px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoContainer p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.logoContainer .first {
+  font-family: "Felipa", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button {
+  margin-right: 30px;
+}
+
+.navigations {
+  margin: 50px 0 50px 30px;
+}
+
+.navigations ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  padding: 15px 10px;
+  margin-top: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+}
+
+.navigations ul li h4 {
+  margin-left: 10px;
+  font-size: 1.2rem !important;
+}
+
+.content {
+  position: absolute;
+  top: 100px;
+  left: 20%;
+  width: 80%;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.users {
+  width: 85%;
+  height: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px 0;
+  overflow: hidden;
+}
+
+.newUser {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.125rem;
+  color: #0077cc;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.newUser p {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+.downloads {
+  padding: 0.5rem 1rem;
+}
+
+.downloads button {
+  padding: 5px 10px;
+
+  border: none;
+  color: #fff;
+}
+
+.excel {
+  background-color: #0f9d58;
+}
+
+.csv {
+  background-color: #3498db;
+}
+
+.pdf {
+  background-color: #ce1126;
+}
+
+.tableBody::-webkit-scrollbar {
+  // width: 0.5rem;
+  height: 0.2rem;
+}
+
+.tableBody::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.tableBody:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.tableBody {
+  width: 95%;
+  max-height: 450px;
+  margin: 1.6rem auto;
+  margin-top: 0.8rem;
+  border-radius: 0.6rem;
+
+  overflow: auto;
+}
+
+th {
+  font-size: 0.875rem;
+  color: #212153;
+}
+
+td {
+  font-size: 0.875rem;
+}
+
+table,
+th,
+td {
+  padding: 0.8rem;
+  border-collapse: collapse;
+  text-align: left;
+  // border: 1px solid #dee2e6;
+}
+
+td a {
+  text-decoration: none;
+  color: #0077cc;
+  background-color: transparent;
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+thead,
+th {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+tbody tr:hover {
+  background-color: #0000000b;
+}
+
+.modalBodyCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modalHeader {
+  padding: 1rem;
+}
+
+.modalHeader h4 {
+  color: #212153;
+  font-size: 1.5rem;
+}
+
+.modalBody {
+  padding: 1.25rem 2rem;
+  width: 100%;
+}
+
+.modalFooter {
+  padding: 0.75rem;
+}
+
+.modalBodyForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.modalBody label {
+  font-size: 1rem;
+  color: #212153;
+}
+
+.modalFooter button {
+  padding: 8px 15px;
+  border: none;
+  width: 80px;
+  border-radius: 6px;
+  color: #ffffff;
+  margin: 0 10px;
+}
+
+@media (max-width: 991px) {
+  .logoContainer p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .logoContainer p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoContainer p {
+    font-size: 0.8rem;
+  }
+
+  .logoContainer .second {
+    font-size: 0.6rem;
+  }
+}

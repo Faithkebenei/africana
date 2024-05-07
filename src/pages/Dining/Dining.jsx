@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Dining.module.scss";
 import Header from "../../components/Header/Header";
 import Gallery from "../../components/Gallery/Gallery";
@@ -17,6 +17,10 @@ import food5 from "../../utils/images/img2.jpg";
 import food6 from "../../utils/images/img25.jpg";
 
 const Dining = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const photos = [
     { index: 0, image: food1 },
     { index: 1, image: food2 },

@@ -11,9 +11,11 @@
     "assert": "^2.1.0",
     "bootstrap": "^5.3.3",
     "google-spreadsheet": "^4.1.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
     "os-browserify": "^0.3.0",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.10.1",
+    "react-bootstrap": "^2.10.2",
     "react-carousel": "^4.3.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
@@ -22,7 +24,8 @@
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
     "sass": "^1.69.7",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",
